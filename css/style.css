@@ -408,7 +408,7 @@ footer div.footer_title {
 
 .modal {
     display: none;
-    background: #337AB7;
+    background: rgba(54, 51, 51, 0.7);
     position: fixed;
     top: 0;
     left: 0;
@@ -448,9 +448,33 @@ footer div.footer_title {
 }
 .modal_txt {
     box-shadow: 0 4px 12px rgba(0,0,0,0.2), 0 16px 20px rgba(0,0,0,0.2);
-    background: #FFF;
+    background: #000000;
     padding: 30px;
-    margin: 100px auto;
+
     max-width: 800px;
 }
 
+.text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.open_modal
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 20px;
+    height: 100%;
+    transition: all 500ms ease-in-out;
+
+}
+
+.open_modal:hover
+{
+    transform: scale(200%);
+    transition: all 500ms ease-in-out;
+    color: #616efa;
+}
