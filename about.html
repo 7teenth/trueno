@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Monomaniac+One&family=Open+Sans&family=Oswald&display=swap"
+          rel="stylesheet">
+    <title>Trueno</title>
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <div class="nav">
+            <div class="site_name" href="index.html">TRUENO</div>
+            <div class="logo">
+                <img src="./img/logo.jpg" alt="">
+            </div>
+            <div class="menu">
+                <div class="downdrop">
+                    <div class="downdrop_title">Menu</div>
+                    <div class="downdrop_menu">
+                        <a href="index.html">
+                            <div class="">Main</div>
+                        </a>
+                        <a href="about.html">
+                            <div class=""><a href="/about.html">About</a></div>
+                        </a>
+                    </div>
+                </div>
+                <div class="login">
+                    <a href="auth.html">
+                        <div class="">Account</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<main>
+    <section class="about">
+        <div class="about_title">
+            Why TRUENO?
+        </div>
+        <div class="about_text">
+            <div class="">
+                The protagonist of the Initial D anime and manga, Takumi Fujiwara, uses his father's AE86 Trueno GT-Apex hatchback
+                to deliver tofu and race. Takumi's friend Itsuki Takeuchi drives an AE85 Levin. Throughout the series, two of Takumi's
+                opponents drive AE86s: Wataru Akiyama drives a turbocharged AE86 Corolla Levin and Shinji Inui drives a coupe
+                version of the AE86 Trueno. The AE86 is also an available vehicle in the Initial D Arcade Stage game series. In the movie
+                The Fast and the Furious, a red Corolla AE86 can be seen waiting in line to enter the Race Wars racing festival. The AE86
+                also makes brief appearances in The Fast and the Furious: Tokyo Drift and Fast and Furious 4. The popularity of the
+                Initial D manga and anime has been cited as the main reason for the car's high value in the secondary market, often
+                referred to as the "Takumi tax" or "tofu tax" after the protagonist and his occupation of delivering tofu.
+            </div>
+            <div class="">
+                In 2012, the Toyota 86 sports car was released, developed jointly by Toyota and Subaru and inspired by the AE86.
+            </div>
+
+        </div>
+    </section>
+
+    <a class="open_modal" href="#open">Открыть окно</a>
+    <div id="modal" class="modal bounceIn">
+
+        <div id="close_modal">+</div>
+        <div class="modal_txt">This site was made with JS</div>
+    </div>
+
+
+    <script>
+        let open_modal = document.querySelectorAll('.open_modal');
+        let close_modal = document.getElementById('close_modal');
+        let modal = document.getElementById('modal');
+        let body = document.getElementsByTagName('body')[0];
+        for (let i = 0; i < open_modal.length; i++) {
+            open_modal[i].onclick = function() { // клік на відкриття
+                modal.classList.add('modal_vis'); // додаємо видимість вікна
+                modal.classList.remove('bounceOutDown'); // видаляємо ефект закриття
+                body.classList.add('body_block'); // прибираємо прокручування
+            };
+        }
+        close_modal.onclick = function() { // клік на закриття
+            modal.classList.add('bounceOutDown'); // додаємо ефект закриття
+            window.setTimeout(function() { // видаляємо вікно через півсекунди (щоб побачити ефект закриття).
+                modal.classList.remove('modal_vis');
+                body.classList.remove('body_block'); // повертаємо прокручування
+            }, 500);
+        };
+    </script>
+
+</main>
+
+<footer>
+    <div class="container">
+        <div class="footer_title">TRUENO 2023<br>
+            all rights reserved
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

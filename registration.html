@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Monomaniac+One&family=Open+Sans&family=Oswald&display=swap"
+          rel="stylesheet">
+    <title>Trueno</title>
+</head>
+<body>
+    
+
+       
+<header>
+    <div class="container">
+        <div class="nav">
+            <div class="site_name" href="index.html">TRUENO</div>
+            <div class="logo">
+                <img src="./img/logo.jpg" alt="">
+            </div>
+            <div class="menu">
+                <div class="downdrop">
+                    <div class="downdrop_title">Menu</div>
+                    <div class="downdrop_menu">
+                        <a href="index.html">
+                            <div class="">Main</div>
+                        </a>
+                            <a href="about.html">
+                            <div class=""><a href="about.html">About</a></div>
+                        </a>
+                    </div>
+                </div>
+                 <div class="login">
+                    <a href="auth.html"><div class="">Account</div></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<main>
+    <section class="auth">
+        <div class="container">
+            <div class="auth_wrapper">
+                <form action="registration.php" method="post">
+                    Sign Up<br>
+                    <span hidden class="message">Wrong! Check fields.</span>
+                    Email: <input required name="login" type="text">
+                    Password: <input required name="password" type="password">
+                    Confirm password: <input required name="password" type="password">
+                    <input class="button" type="submit" value="Go">
+                    <div class="">
+                        <div class="register">
+                            <div class="">Already have an account?</div>
+                            <a href="auth.html">Sign in!</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="container">
+        <div class="footer_title">TRUENO 2023<br>
+            all rights reserved
+        </div>
+    </div>
+</footer>
+<script src="common.js"></script>
+
+</body>
+</html>
